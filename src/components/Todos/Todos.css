@@ -1,0 +1,169 @@
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background-color: rgb(229, 228, 228);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-family: "Rajdhani";
+  font-size: 125px;
+  font-weight: 100;
+  color: rgb(175, 174, 174);
+}
+
+.todos-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  font-family: "Comfortaa";
+  gap: 1px;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.form > * {
+  height: 50px;
+  font-size: 22px;
+  font-family: "Comfortaa";
+  border: 1px solid rgb(210, 208, 210);
+}
+
+.form button {
+  background-color: white;
+  height: 100%;
+  border-left: none;
+  color: rgb(128, 126, 126);
+}
+
+.equal-width {
+  width: 90%;
+}
+
+.one-todo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(210, 208, 210);
+  background-color: white;
+  gap: 15px;
+  height: 50px;
+  font-size: 22px;
+}
+
+.one-todo-container button {
+  margin-right: 20px;
+  border: none;
+  background-color: white;
+  color: rgb(128, 126, 126);
+}
+
+.one-todo-container input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.one-todo-container input[type="checkbox"] + label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 33px;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid rgb(210, 208, 210);
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.one-todo-container input[type="checkbox"]:checked + label {
+  background-color: white;
+}
+
+.one-todo-container input[type="checkbox"] + label::after {
+  content: "";
+  width: 7px;
+  height: 16px;
+  border: solid #007bff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  visibility: hidden;
+}
+
+.one-todo-container input[type="checkbox"]:checked + label::after {
+  visibility: visible;
+  border-color: green;
+}
+
+.text-todo {
+  width: 80%;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.strikethrough-text {
+  color: rgb(183, 179, 179);
+  text-decoration: line-through;
+}
+
+#input-form {
+  width: 550px;
+  padding-left: 17px;
+  border-right: none;
+  margin-right: 2px;
+}
+
+#input-form:focus {
+  outline: 1px solid grey;
+}
+
+.page-change-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  height: 50px;
+  background-color: white;
+  margin-bottom: 25px;
+  box-shadow: 0 7px 3px grey, 0 4px rgb(163, 162, 162);
+  color: rgb(128, 126, 126);
+}
+
+.page-change-buttons button {
+  color: rgb(128, 126, 126);
+  background-color: white;
+  height: 25px;
+}
+
+.active {
+  border: 1px solid rgb(163, 162, 162);
+  border-radius: 5px;
+}
+
+.inactive {
+  border: none;
+}
+
+.clear {
+  border: none;
+}
